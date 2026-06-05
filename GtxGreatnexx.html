@@ -840,20 +840,15 @@
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var tiktokUrl = "https://www.tiktok.com/@big_hart195/photo/7518851877123951928?is_from_webapp=1&sender_device=pc&web_id=7643508477683369473";
-            function openTikTok(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                window.open(tiktokUrl, "_blank");
+            var tiktokEmbedUrl = "https://www.tiktok.com/embed/v2/7518851877123951928";
+            var player = document.getElementById("video-player");
+            if (player) {
+                player.innerHTML = '<iframe src="' + tiktokEmbedUrl + '" width="100%" height="100%" frameborder="0" scrolling="no" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="min-height: 400px; width: 100%; height: 100%; border: 0;"></iframe>';
             }
             var cover = document.querySelector(".layout__cover");
-            var player = document.getElementById("video-player");
-            [cover, player].forEach(function(el) {
-                if (el) {
-                    el.style.cursor = "pointer";
-                    el.addEventListener("click", openTikTok, true);
-                }
-            });
+            if (cover) {
+                cover.style.cursor = "default";
+            }
         });
     </script>
     </body>
