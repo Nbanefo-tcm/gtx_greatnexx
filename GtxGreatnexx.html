@@ -25,8 +25,8 @@
 <meta property="og:image:width" content="600">
 <meta property="og:image:height" content="315">
 
-    <meta property="og:video" content="https://youtu.be/zm96T-_2edI?autoplay=1">
-    <meta property="og:video:secure_url" content="https://youtu.be/zm96T-_2edI?autoplay=1">
+    <meta property="og:video" content="https://www.tiktok.com/@big_hart195/photo/7518851877123951928?is_from_webapp=1&sender_device=pc&web_id=7643508477683369473">
+    <meta property="og:video:secure_url" content="https://www.tiktok.com/@big_hart195/photo/7518851877123951928?is_from_webapp=1&sender_device=pc&web_id=7643508477683369473">
     <meta property="og:video:type" content="application/x-shockwave-flash">
     <meta property="og:video:width" content="1280">
     <meta property="og:video:height" content="720">
@@ -40,7 +40,7 @@
 
     <meta name="twitter:image" content="image/gtx_greatness.png">
 
-    <meta name="twitter:player" content="https://youtu.be/zm96T-_2edI">
+    <meta name="twitter:player" content="https://www.tiktok.com/@big_hart195/photo/7518851877123951928?is_from_webapp=1&sender_device=pc&web_id=7643508477683369473">
     <meta name="twitter:player:width" content="640">
     <meta name="twitter:player:height" content="480">
 
@@ -688,8 +688,8 @@
 
 <script id="linkfire-player-data">
     window.linkfire.playerOptions = {
-                                        youtubeUrl: "https:\/\/youtu.be\/zm96T-_2edI",
-                type: "video",
+        youtubeUrl: "https://www.tiktok.com/@big_hart195/photo/7518851877123951928?is_from_webapp=1&sender_device=pc&web_id=7643508477683369473",
+        type: "video",
         isMobile: false,
         artistName: "Gtx_Greatnexx",
         albumName: null,
@@ -837,6 +837,24 @@
             <p>You have rejected the use of cookies for this service. <button class="lnk-c-footnote__button lnk-c-inline-btn--white" onclick="lnk_consent('open_preferences')">Click here</button> to manage your permissions.</p>
             <div class="lnk-c-footnote__affiliate">This page may contain affiliate links.</div>
         </div>
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var tiktokUrl = "https://www.tiktok.com/@big_hart195/photo/7518851877123951928?is_from_webapp=1&sender_device=pc&web_id=7643508477683369473";
+            function openTikTok(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                window.open(tiktokUrl, "_blank");
+            }
+            var cover = document.querySelector(".layout__cover");
+            var player = document.getElementById("video-player");
+            [cover, player].forEach(function(el) {
+                if (el) {
+                    el.style.cursor = "pointer";
+                    el.addEventListener("click", openTikTok, true);
+                }
+            });
+        });
     </script>
     </body>
 </html>
